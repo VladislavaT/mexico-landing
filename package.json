@@ -41,5 +41,7 @@
   "mateAcademy": {
     "projectType": "layout"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^10.2.0"
+  }
 }

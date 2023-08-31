@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link
       rel="icon"
       type="image/x-icon"
@@ -28,7 +29,58 @@
       </section>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/banner BG.png" alt="banner">
+            <div class="slide-content">
+              <p>
+                Bono de primer
+              </p>
+              <p>
+                depósito hasta
+              </p>
+              <p>
+                40 000 MXN
+              </p>
+              <p>
+                COMBOBOOST hasta el 100% en apuestas combinadas
+              </p>
+              <button class="slide-button">
+                Regístrate
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              class="slide-img"
+              src="./images/banner BG (1).png" alt="banner">
+            <div class="slide-content">
+              <div class="slide-content content-top">
+                </div>
+              <p>
+                Bono de primer
+              </p>
+              <p>
+                depósito hasta
+              </p>
+              <p>
+                40 000 MXN
+              </p>
+              <p>
+                Reembolso del 500% en apuestas deportivas
+              </p>
+              <button class="slide-button">
+                Regístrate
+              </button>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
 
     <footer class="footer">
       <section class="footer__content">
@@ -49,7 +101,7 @@
           >
         </form>
 
-        <div class="footer__payments">
+        <div class="footer__payments payments">
           <img
             class="payments__item"
             src="./images/icons/VISA.svg"
@@ -63,7 +115,7 @@
           <img
             class="payments__item"
             src="./images/icons/AMEX.svg"
-            alt="MASTERCARD"
+            alt="AMEX"
           >
           <img
             class="payments__item"
@@ -135,6 +187,14 @@
       </section>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+       pagination: {
+        el: ".swiper-pagination",
+      },
+      });
+    </script>
   </body>
 </html>
