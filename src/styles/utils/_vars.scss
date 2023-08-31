@@ -1,1 +1,9 @@
-$c-gray: #eee;
+$c-white: #fff;
+$c-green-light: #63d737;
+$c-green-dark: #058048;
+$c-grey: #d9d9d9;
+
+$gradient-button-form:
+  linear-gradient(102deg, $c-green-light 7.53%, $c-green-dark 98.25%);
+
+$m-bottom: 43px;

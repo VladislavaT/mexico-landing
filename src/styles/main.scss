@@ -2,6 +2,178 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
+.page {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background-color: #293b2b;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40px;
+  background: linear-gradient(0deg, rgba(22, 26, 22, 0) 0%, #161a16 100%);
+
+  &__logo {
+    height: 18px;
+    width: 70px;
+
+    @include onDesktop {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__login {
+    color: $c-white;
+    font-size: 16px;
+    padding-right: 20px;
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__registration {
+    color: $c-white;
+    border-radius: 100px;
+    border: none;
+    background: linear-gradient(149deg, $c-green-light 0%, $c-green-dark 100%);
+    box-shadow:
+      0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 1px 1px 0 $c-green-light, 0 1px 20px 0 $c-green-dark;
+    }
+  }
+
+  @include onDesktop {
+    line-height: 60px;
+  }
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  @include onDesktop {
+    padding: 0 40px;
+  }
+}
+
+.flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  transform: skewX(-45deg);
+  animation: flareAnimation 2s infinite linear;
+  left: -150%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.4)
+  );
+}
+
+@keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.main {
+  margin-bottom: $m-bottom;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: $m-bottom;
+
+  &__payments {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+  }
+
+  &__logo {
+    display: flex;
+    align-self: center;
+    max-width: 150px;
+    margin-top: 20px;
+
+    @include onDesktop {
+      padding-right: 100px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  box-sizing: border-box;
+  align-items: stretch;
+  padding: 1px;
+  border-radius: 70px;
+  background: $gradient-button-form;
+  overflow: hidden;
+  margin-bottom: $m-bottom;
+
+  &__input {
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    &::placeholder {
+      color: $c-grey;
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: $c-white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  @include onDesktop {
+    max-width: 980px;
+  }
+}
+
+.payments__item {
+  object-fit: fill;
+  padding-right: 16px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 320px;
+
+  @include onDesktop {
+    max-width: 1024px;
+  }
 }
