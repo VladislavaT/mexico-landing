@@ -1,3 +1,3 @@
-# Base layout template with Gulp, SCSS and Stylelint
+# Mexico landing
 
 - [DEMO LINK](https://VladyslavaT.github.io/mexico-landing/)
