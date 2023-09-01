@@ -1,3 +1,3 @@
 # Mexico landing
 
-- [DEMO LINK](https://VladyslavaT.github.io/mexico-landing/)
+- [DEMO LINK](https://vladislavat.github.io/mexico-landing/)
