@@ -218,6 +218,15 @@
 
     @include onDesktop {
       padding-right: 100px;
+      visibility: hidden;
+    }
+
+    &--desktop {
+      visibility: hidden;
+
+      @include onDesktop {
+        visibility: visible;
+      }
     }
   }
 }
