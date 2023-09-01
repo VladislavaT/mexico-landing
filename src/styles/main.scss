@@ -73,6 +73,58 @@
   }
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1180px;
+
+  @include onDesktop {
+    justify-content: right;
+  }
+}
+
+.deposit {
+  display: flex;
+  align-items: center;
+  z-index: 98;
+  float: right;
+  padding: 5px 30px;
+  background-color: $c-white;
+
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+
+  text-align: center;
+  font-weight: 900;
+
+  &__description {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  &__price {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  @include onDesktop {
+    padding: 14px 23px;
+    border-bottom-left-radius: 25.8px;
+    border-bottom-right-radius: 25.8px;
+
+    display: flex;
+    flex-direction: column;
+
+    &__description {
+      font-size: 20px;
+    }
+
+    &__price {
+      font-size: 28px;
+    }
+  }
+}
+
 .flare {
   position: absolute;
   top: 0;
@@ -94,6 +146,41 @@
   }
   100% {
     left: 150%;
+  }
+}
+
+.slide-content {
+  width: 230px;
+
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+
+  &__price {
+    justify-content: left;
+    margin: 0;
+    font-size: 32px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &-left {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: left;
+  }
+
+  &-right {
+    margin: 0;
+    width: 100%;
+    font-style: italic;
+    justify-content: right;
   }
 }
 
