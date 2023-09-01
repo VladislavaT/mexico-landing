@@ -218,14 +218,14 @@
 
     @include onDesktop {
       padding-right: 100px;
-      visibility: hidden;
+      display: none;
     }
 
     &--desktop {
-      visibility: hidden;
+      display: none;
 
       @include onDesktop {
-        visibility: visible;
+        display: flex;
       }
     }
   }
@@ -263,7 +263,7 @@
   }
 
   @include onDesktop {
-    max-width: 980px;
+    width: 100%;
   }
 }
 
@@ -293,5 +293,18 @@
 
   @include onDesktop {
     max-width: 1182px;
+
+    &--desktop > * {
+      margin: 0;
+    }
+  }
+
+  &--desktop {
+    @include onDesktop {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      margin-bottom: $m-bottom-desk;
+    }
   }
 }
